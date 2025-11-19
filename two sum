@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int nums[] = {2, 7, 11, 15};//Input array
+    int target = 9;
+    int n = sizeof(nums) / sizeof(nums[0]);
+    
+    int n1 = -1, n2 = -1;  // To store the result
+    
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (nums[i] + nums[j] == target) {
+                n1 = i;
+                n2 = j;
+                break;
+            }
+        }
+        if (n1 != -1) break; // Exit outer loop if found
+    }
+    
+    cout << "[" << n1 << ", " << n2 << "]" << endl;  // Output: [0, 1]
+    
+    return 0;
+}
