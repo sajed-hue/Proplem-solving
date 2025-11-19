@@ -23,3 +23,13 @@ string longestCommonPrefix(string strs[], int n) {
     
     return prefix;
 }
+
+int main() {
+    string strs[] = {"flower","flow","flight"};
+    int n = sizeof(strs) / sizeof(strs[0]);
+    
+    string result = longestCommonPrefix(strs, n);
+    cout << "Longest Common Prefix: " << result << endl;  // Output: "fl"
+    
+    return 0;
+}
